@@ -1,0 +1,260 @@
+@import "partials/reset";
+@import "partials/variables";
+
+
+@font-face {
+    font-family: 'lato-black';
+    src: url('../fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: 'lato-italic';
+    src: url('../fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'golden';
+    src: url('../fonts/GOLDEN.otf');
+}
+
+
+header.cabecera {
+    position: relative;
+    width: $anchoMax;
+    height: 700px;
+    background: rgb(189, 189, 189);
+    background: linear-gradient(90deg, #847996 0%, #7a90ad 0%, #F4ECD6 48%, #995783 100%);
+    background-size: 400% 100%;
+    animation: gradient 20s ease infinite;
+    position: px;
+
+    div.row {
+        width: $anchoMax;
+    }
+
+    h1 {
+        font-family: 'golden';
+    }
+    h1.display-5 {
+        font-family: 'lato-regular';
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: 'lato-italic';
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: $anchoMin $anchoMed;
+    }
+
+    50% {
+        background-position: $anchoMax $anchoMed;
+    }
+
+    100% {
+        background-position: $anchoMin $anchoMed;
+    }
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'lato-regular';
+    background-color: #f3edffe7;
+    color: #310A31;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: $anchoMax;
+    background-color: #310a3146;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+            margin: 5px;
+            background-color: #84799600;
+            list-style: none;
+            font-size: 20px;
+
+            a {
+                color: #310A31;
+            }
+
+            a.a-contacto {
+                display: inline-flex;
+                height: 2.5rem;
+                padding: 0.5rem 1rem;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                flex-shrink: 0;
+                background: #310A31;
+                color: #ffffff;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #f3edff4d;
+                    color: #310A31;
+                    border-radius: 5px;
+                }
+            }
+
+            &:hover {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                height: 2.5rem;
+                background-color: #f3edff15;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.custom-1-btn-color {
+    background-color: #ff000000;
+    border-color: #847996;
+
+    &:hover {
+        background-color: #847996;
+        border-color: #310A31;
+    }
+}
+
+/* Scroll barra de navegacion */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 130px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 30px;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 2rem;
+    color: #847996;
+    background-color: #27005a00;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.3s;
+    opacity: 100%;
+
+    &:hover {
+        background-color: #310A31;
+    }
+}
+
+.scroll-to-top-btn i {
+    position: relative;
+    top: 0px;
+}
+
+
+
+
+
+
+/* Inicio footer */
+.custom-footer {
+    background-color: #c9c4d2;
+    color: #696969;
+    max-width: 120rem;
+
+    a {
+        color: #696969;
+    }
+}
+
+
+
+
+
+
+/* Mediaqueries para tablets */
+@media (max-width: 992px) {
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+}
+
+/* Mediaqueries para dispositivos móviles */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .card-text {
+        font-size: 14px;
+        margin: 20px
+    }
+
+    .btn {
+        margin: 20px
+    }
+}
+
+
+
+@import "partials/bucles";
