@@ -1,0 +1,9 @@
+@mixin card-con-borde {
+        border: 2.5px solid;
+        border-radius: 10px;
+        border-image: linear-gradient(to left bottom, #6200ff 0%, #7a90ad 0%, #F4ECD6 48%, #995783 100%);
+        border-image-slice: 1;
+        color: $colorPrincipal;
+    }
+
+    

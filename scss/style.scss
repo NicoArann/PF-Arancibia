@@ -1,6 +1,8 @@
 @import "partials/reset";
 @import "partials/variables";
+@import "partials/mixins";
 
+/* Tipografías */
 
 @font-face {
     font-family: 'lato-black';
@@ -23,6 +25,8 @@
 }
 
 
+/* Cabecera */
+
 header.cabecera {
     position: relative;
     width: $anchoMax;
@@ -30,7 +34,7 @@ header.cabecera {
     background: rgb(189, 189, 189);
     background: linear-gradient(90deg, #847996 0%, #7a90ad 0%, #F4ECD6 48%, #995783 100%);
     background-size: 400% 100%;
-    animation: gradient 20s ease infinite;
+    animation: gradient-cabecera 20s ease-in-out infinite;
     position: px;
 
     div.row {
@@ -51,8 +55,7 @@ header.cabecera {
     }
 }
 
-
-@keyframes gradient {
+@keyframes gradient-cabecera {
     0% {
         background-position: $anchoMin $anchoMed;
     }
@@ -65,6 +68,8 @@ header.cabecera {
         background-position: $anchoMin $anchoMed;
     }
 }
+
+/* Estilos de links y elementos generales*/
 
 a:link {
     text-decoration: none;
@@ -79,6 +84,23 @@ body {
     background-color: #f3edffe7;
     color: #310A31;
 }
+
+
+.imagen{
+    border: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, transform 0.3s ease;
+}
+
+.imagen:hover { transform: scale(1.02);
+                transition: 0.5s;
+                box-shadow: 0 0 18px rgba(0, 0, 0, 0.295);
+                border: 5px;
+                
+}
+
+
+
+/* Navbar */
 
 .navbar {
     position: fixed;
@@ -120,6 +142,8 @@ body {
                     background-color: #f3edff4d;
                     color: #310A31;
                     border-radius: 5px;
+                    transition: 0.3s;
+                    scale: (1.04);
                 }
             }
 
@@ -130,6 +154,7 @@ body {
                 height: 2.5rem;
                 background-color: #f3edff15;
                 border-radius: 5px;
+                transition: 0.3s;
             }
         }
     }
@@ -144,6 +169,27 @@ body {
         border-color: #310A31;
     }
 }
+
+
+/* Listas enlaces Contacto */
+
+div {
+    div {
+        ul {
+            li {
+                margin: 2%;
+                list-style: none;
+            }
+        }
+    }
+}
+
+
+/* Mixins en card */
+div.card-1 {
+    @include card-con-borde;
+}
+
 
 /* Scroll barra de navegacion */
 
@@ -160,18 +206,20 @@ section[id] {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #ffffff00;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #310a3188;
     border-radius: 30px;
 
     &:hover {
-        background-color: #555;
+        background-color: #310a31de;
     }
 }
 
+
+/* Botón subir al top */
 
 .scroll-to-top-btn {
     position: fixed;
@@ -179,7 +227,7 @@ section[id] {
     right: 20px;
     z-index: 999;
     font-size: 2rem;
-    color: #847996;
+    color: #310a31a9;
     background-color: #27005a00;
     border-radius: 100%;
     width: 50px;
@@ -190,6 +238,7 @@ section[id] {
     opacity: 100%;
 
     &:hover {
+        color: #f3edff;
         background-color: #310A31;
     }
 }
@@ -200,26 +249,32 @@ section[id] {
 }
 
 
-
-
-
-
-/* Inicio footer */
-.custom-footer {
-    background-color: #c9c4d2;
+/* Footer */
+footer {
+    background-color: #310a3136;
     color: #696969;
-    max-width: 120rem;
+    max-width: $anchoMax;
+    color: $colorPrincipal;
 
-    a {
-        color: #696969;
+    div.col {
+        i {
+            color: $colorPrincipal;
+            width: 50%;
+            height: 50%;
+            transition: scale 0.2s ease, transform 0.2s ease, color 0.2s ease;
+        }
+
+        &:hover {
+            scale: (1.1);
+            transform: translate(0px, -2px);
+            color: #8348b9;
+            transition: 0.2s;
+        }
     }
 }
+ 
 
-
-
-
-
-
+/* Mediaqueries */
 /* Mediaqueries para tablets */
 @media (max-width: 992px) {
     .card-body {

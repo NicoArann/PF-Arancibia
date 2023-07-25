@@ -8,6 +8,7 @@
 /* Font sizes */
 /* Tamaños */
 /* Colores */
+/* Tipografías */
 @font-face {
   font-family: "lato-black";
   src: url("../fonts/Lato-Black.ttf");
@@ -24,6 +25,7 @@
   font-family: "golden";
   src: url("../fonts/GOLDEN.otf");
 }
+/* Cabecera */
 header.cabecera {
   position: relative;
   width: 100%;
@@ -31,7 +33,7 @@ header.cabecera {
   background: rgb(189, 189, 189);
   background: linear-gradient(90deg, #847996 0%, #7a90ad 0%, #F4ECD6 48%, #995783 100%);
   background-size: 400% 100%;
-  animation: gradient 20s ease infinite;
+  animation: gradient-cabecera 20s ease-in-out infinite;
   position: px;
 }
 header.cabecera div.row {
@@ -48,7 +50,7 @@ header.cabecera p {
   font-family: "lato-italic";
 }
 
-@keyframes gradient {
+@keyframes gradient-cabecera {
   0% {
     background-position: 0% 50%;
   }
@@ -59,6 +61,7 @@ header.cabecera p {
     background-position: 0% 50%;
   }
 }
+/* Estilos de links y elementos generales*/
 a:link {
   text-decoration: none;
 }
@@ -73,6 +76,19 @@ body {
   color: #310A31;
 }
 
+.imagen {
+  border: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, transform 0.3s ease;
+}
+
+.imagen:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.295);
+  border: 5px;
+}
+
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -112,6 +128,8 @@ body {
   background-color: rgba(243, 237, 255, 0.3019607843);
   color: #310A31;
   border-radius: 5px;
+  transition: 0.3s;
+  scale: 1.04;
 }
 .navbar ul li:hover {
   display: inline-flex;
@@ -120,6 +138,7 @@ body {
   height: 2.5rem;
   background-color: rgba(243, 237, 255, 0.0823529412);
   border-radius: 5px;
+  transition: 0.3s;
 }
 
 .custom-1-btn-color {
@@ -129,6 +148,21 @@ body {
 .custom-1-btn-color:hover {
   background-color: #847996;
   border-color: #310A31;
+}
+
+/* Listas enlaces Contacto */
+div div ul li {
+  margin: 2%;
+  list-style: none;
+}
+
+/* Mixins en card */
+div.card-1 {
+  border: 2.5px solid;
+  border-radius: 10px;
+  border-image: linear-gradient(to left bottom, #6200ff 0%, #7a90ad 0%, #F4ECD6 48%, #995783 100%);
+  border-image-slice: 1;
+  color: #310A31;
 }
 
 /* Scroll barra de navegacion */
@@ -145,24 +179,25 @@ section[id] {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: rgba(49, 10, 49, 0.5333333333);
   border-radius: 30px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: rgba(49, 10, 49, 0.8705882353);
 }
 
+/* Botón subir al top */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
   font-size: 2rem;
-  color: #847996;
+  color: rgba(49, 10, 49, 0.662745098);
   background-color: rgba(39, 0, 90, 0);
   border-radius: 100%;
   width: 50px;
@@ -173,6 +208,7 @@ section[id] {
   opacity: 100%;
 }
 .scroll-to-top-btn:hover {
+  color: #f3edff;
   background-color: #310A31;
 }
 
@@ -181,16 +217,27 @@ section[id] {
   top: 0px;
 }
 
-/* Inicio footer */
-.custom-footer {
-  background-color: #c9c4d2;
+/* Footer */
+footer {
+  background-color: rgba(49, 10, 49, 0.2117647059);
   color: #696969;
-  max-width: 120rem;
+  max-width: 100%;
+  color: #310A31;
 }
-.custom-footer a {
-  color: #696969;
+footer div.col i {
+  color: #310A31;
+  width: 50%;
+  height: 50%;
+  transition: scale 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+footer div.col:hover {
+  scale: 1.1;
+  transform: translate(0px, -2px);
+  color: #8348b9;
+  transition: 0.2s;
 }
 
+/* Mediaqueries */
 /* Mediaqueries para tablets */
 @media (max-width: 992px) {
   .card-body {
