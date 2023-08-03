@@ -25,6 +25,7 @@
 }
 
 
+
 /* Cabecera */
 
 header.cabecera {
@@ -126,6 +127,11 @@ body {
                 color: #310A31;
             }
 
+            .logo-img {
+                width: 50px;
+                height: 50px;
+              }
+            
             a.a-contacto {
                 display: inline-flex;
                 height: 2.5rem;
@@ -136,7 +142,7 @@ body {
                 flex-shrink: 0;
                 background: #310A31;
                 color: #ffffff;
-                border-radius: 5px;
+                border-radius: 8px;
 
                 &:hover {
                     background-color: #f3edff4d;
@@ -145,9 +151,10 @@ body {
                     transition: 0.3s;
                     scale: (1.04);
                 }
+                
             }
 
-            &:hover {
+            .enlaces:hover {
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
@@ -158,21 +165,30 @@ body {
             }
         }
     }
+    /* .enlaces-navbar{
+        margin-right: 20%;
+    } */
 }
 
 .custom-1-btn-color {
-    background-color: #ff000000;
-    border-color: #847996;
+    background-color: #310a3100;
+    border-color: $colorPrincipal;
+    color: #49c04f;
+    border-color: #310a3181;
+    border-radius: 10px;
 
     &:hover {
         background-color: #847996;
         border-color: #310A31;
     }
+
+}
+.btn{
+    color: #310a31;
+    
 }
 
-
 /* Listas enlaces Contacto */
-
 div {
     div {
         ul {
@@ -189,6 +205,8 @@ div {
 div.card-1 {
     @include card-con-borde;
 }
+
+
 
 
 /* Scroll barra de navegacion */
@@ -236,7 +254,6 @@ section[id] {
     line-height: 50px;
     transition: background-color 0.3s;
     opacity: 100%;
-
     &:hover {
         color: #f3edff;
         background-color: #310A31;
@@ -272,9 +289,27 @@ footer {
         }
     }
 }
- 
 
 /* Mediaqueries */
+@media (max-width: 2000px) {
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .enlaces-navbar{
+        margin-right: 20%;
+        margin-bottom: 0;
+    }
+}
+
 /* Mediaqueries para tablets */
 @media (max-width: 992px) {
     .card-body {
@@ -287,6 +322,11 @@ footer {
 
     .card-text {
         font-size: 16px;
+    }
+
+    .enlaces-navbar{
+        margin-right: 0;
+        margin-bottom: 5%;
     }
 }
 
@@ -308,6 +348,11 @@ footer {
 
     .btn {
         margin: 20px
+    }
+
+    .enlaces-navbar{
+        margin-right: 0;
+        margin-bottom: 5%;
     }
 }
 
