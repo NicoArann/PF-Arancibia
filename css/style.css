@@ -97,9 +97,6 @@ body {
   background-size: cover;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(8px);
-  /* .enlaces-navbar{
-      margin-right: 20%;
-  } */
 }
 .navbar ul {
   display: flex;
