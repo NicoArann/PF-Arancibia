@@ -295,6 +295,10 @@ footer {
         margin-right: 20%;
         margin-bottom: 0;
     }
+
+    .titulo-principal{
+        font-size: 35px;
+    }
 }
 
 /* Mediaqueries para tablets */
@@ -314,6 +318,9 @@ footer {
     .enlaces-navbar{
         margin-right: 0;
         margin-bottom: 5%;
+    }
+    .titulo-principal{
+        font-size: 30px;
     }
 }
 
@@ -340,6 +347,9 @@ footer {
     .enlaces-navbar{
         margin-right: 0;
         margin-bottom: 5%;
+    }
+    .titulo-principal{
+        font-size: 25px;
     }
 }
 

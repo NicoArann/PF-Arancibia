@@ -263,6 +263,9 @@ footer div.col:hover {
     margin-right: 20%;
     margin-bottom: 0;
   }
+  .titulo-principal {
+    font-size: 35px;
+  }
 }
 /* Mediaqueries para tablets */
 @media (max-width: 992px) {
@@ -278,6 +281,9 @@ footer div.col:hover {
   .enlaces-navbar {
     margin-right: 0;
     margin-bottom: 5%;
+  }
+  .titulo-principal {
+    font-size: 30px;
   }
 }
 /* Mediaqueries para dispositivos móviles */
@@ -299,6 +305,9 @@ footer div.col:hover {
   .enlaces-navbar {
     margin-right: 0;
     margin-bottom: 5%;
+  }
+  .titulo-principal {
+    font-size: 25px;
   }
 }
 .title-1 {
