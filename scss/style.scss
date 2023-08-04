@@ -24,8 +24,6 @@
     src: url('../fonts/GOLDEN.otf');
 }
 
-
-
 /* Cabecera */
 
 header.cabecera {
@@ -86,7 +84,6 @@ body {
     color: #310A31;
 }
 
-
 .imagen{
     border: 10px;
     transition: box-shadow 0.3s ease, transform 0.3s ease, transform 0.3s ease;
@@ -98,8 +95,6 @@ body {
                 border: 5px;
                 
 }
-
-
 
 /* Navbar */
 
@@ -151,7 +146,6 @@ body {
                     transition: 0.3s;
                     scale: (1.04);
                 }
-                
             }
 
             .enlaces:hover {
@@ -180,6 +174,7 @@ body {
     }
 
 }
+
 .btn{
     color: #310a31;
     
@@ -197,14 +192,10 @@ div {
     }
 }
 
-
 /* Mixins en card */
 div.card-1 {
     @include card-con-borde;
 }
-
-
-
 
 /* Scroll barra de navegacion */
 
@@ -232,7 +223,6 @@ section[id] {
         background-color: #310a31de;
     }
 }
-
 
 /* Botón subir al top */
 
@@ -352,7 +342,5 @@ footer {
         margin-bottom: 5%;
     }
 }
-
-
 
 @import "partials/bucles";
