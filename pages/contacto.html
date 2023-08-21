@@ -106,21 +106,27 @@
           </ul>
 
         </div class="col-md-5 col-lg-6">
+
         <div class="col">
-          <div class="mb-3 fw-bold">
-            <label for="exampleFormControlInput1" class="form-label">Tu nombre</label>
-            <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example">
-          </div>
-          <div class="mb-3 fw-bold">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@ejemplo.com">
-          </div>
-          <div class="mb-3 fw-bold">
-            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <a href="#" class="btn btn-outline-secondary custom-1-btn-color fw-medium">Enviar</a>
+          <form action="https://formsubmit.co/nico.arancibia@outlook.com" method="POST">
+            <div class="mb-3 fw-bold">
+              <label for="name" class="form-label">Tu nombre</label>
+              <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example" name="name">
+            </div>
+            <div class="mb-3 fw-bold">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@ejemplo.com" name="email">
+            </div>
+            <div class="mb-3 fw-bold">
+              <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+              <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <input class="btn btn-outline-secondary custom-1-btn-color fw-medium" type="submit" value="Enviar">
+
+            <input type="hidden" name="_captcha" value="false">
+          </form>
         </div>
+
       </div>
     </div>
 
